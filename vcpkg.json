@@ -1,0 +1,12 @@
+{
+  "dependencies": [
+    "boost-assert",
+    "boost-gil",
+    "boost-log",
+    "boost-program-options",
+    "glad",
+    "glfw3",
+    "glm",
+    "boost-dll"
+  ]
+}
