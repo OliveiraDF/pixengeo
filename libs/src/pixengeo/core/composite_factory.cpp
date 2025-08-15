@@ -43,7 +43,7 @@
 namespace pxg::core
 {
 
-	[[no_discard]] std::unique_ptr<object> composite_factory::create(std::string_view type) const
+	/*[[no_discard]] std::unique_ptr<object> composite_factory::create(std::string_view type) const
 	{
 		for (const auto& factory : m_factories)
 		{
@@ -54,6 +54,6 @@ namespace pxg::core
 		}
 
 		return nullptr;
-	}
+	}*/
 
 }

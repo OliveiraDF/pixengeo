@@ -81,7 +81,7 @@ namespace pxg::gfx
 
 		glCheck(glGenVertexArrays(1, &mesh._vao_id));
 		glCheck(glBindVertexArray(mesh._vao_id));
-		
+	
 		shader._program_id = m_shader_programs.find(shader_name.data())->second;
 		const GLint pos_location = glGetAttribLocation(shader._program_id, "vPos");
 		glCheck(glEnableVertexAttribArray(pos_location));

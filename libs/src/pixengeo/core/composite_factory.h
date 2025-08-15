@@ -53,11 +53,11 @@ namespace pxg::core
 
 	private:
 
-		std::array<std::unique_ptr<factory>, 2> m_factories;
+		//std::array<std::unique_ptr<factory>, 2> m_factories;
 
 	public:
 
-		[[no_discard]] std::unique_ptr<object> create(std::string_view type) const;
+		//[[no_discard]] std::unique_ptr<object> create(std::string_view type) const;
 
 	};
 

@@ -1,12 +1,13 @@
 {
   "dependencies": [
     "boost-assert",
+    "boost-dll",
     "boost-gil",
     "boost-log",
     "boost-program-options",
+    "boost-property-tree",
     "glad",
     "glfw3",
-    "glm",
-    "boost-dll"
+    "glm"
   ]
 }

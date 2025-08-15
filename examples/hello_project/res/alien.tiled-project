@@ -1,0 +1,350 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "compatibilityVersion": 1100,
+    "extensionsPath": "extensions",
+    "folders": [
+        "."
+    ],
+    "properties": [
+        {
+            "name": "maps",
+            "propertytype": "project",
+            "type": "class",
+            "value": {
+                "map_folder": "maps/",
+                "map_list": "main_menu.tmx;room_01.tmx",
+                "starting_map": "main_menu"
+            }
+        }
+    ],
+    "propertyTypes": [
+        {
+            "color": "#ffff0000",
+            "drawFill": true,
+            "id": 11,
+            "members": [
+                {
+                    "name": "type",
+                    "propertyType": "Énumération0",
+                    "type": "string",
+                    "value": "Énumération0_2"
+                }
+            ],
+            "name": "collider",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffffff7f",
+            "drawFill": true,
+            "id": 6,
+            "members": [
+                {
+                    "name": "angle",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "color",
+                    "type": "color",
+                    "value": ""
+                },
+                {
+                    "name": "intensity",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "opening_angle",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "quality",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "radius",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "directional_light",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "id": 12,
+            "name": "Énumération0",
+            "storageType": "string",
+            "type": "enum",
+            "values": [
+                "Énumération0_1",
+                "Énumération0_2",
+                "Énumération0_3"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ffa4a4a4",
+            "drawFill": true,
+            "id": 8,
+            "members": [
+                {
+                    "name": "shadow",
+                    "type": "color",
+                    "value": "#ff464646"
+                }
+            ],
+            "name": "light_system",
+            "type": "class",
+            "useAs": [
+                "property",
+                "layer",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 17,
+            "members": [
+            ],
+            "name": "listener",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 18,
+            "members": [
+                {
+                    "name": "map_folder",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "map_list",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "starting_map",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
+            "name": "project",
+            "type": "class",
+            "useAs": [
+                "property",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 14,
+            "members": [
+                {
+                    "name": "position",
+                    "propertyType": "vector2",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "size",
+                    "propertyType": "vector2",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
+            "name": "rect",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 16,
+            "members": [
+            ],
+            "name": "scriptable",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffffff7f",
+            "drawFill": true,
+            "id": 5,
+            "members": [
+                {
+                    "name": "color",
+                    "type": "color",
+                    "value": ""
+                },
+                {
+                    "name": "intensity",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "quality",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "radius",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "spot_light",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 9,
+            "members": [
+            ],
+            "name": "tilemap",
+            "type": "class",
+            "useAs": [
+                "property",
+                "layer",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 15,
+            "members": [
+                {
+                    "name": "x",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "y",
+                    "type": "float",
+                    "value": 0
+                }
+            ],
+            "name": "vector2",
+            "type": "class",
+            "useAs": [
+                "property",
+                "map",
+                "layer",
+                "object",
+                "tile",
+                "tileset",
+                "wangcolor",
+                "wangset",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 13,
+            "members": [
+                {
+                    "name": "rotation",
+                    "type": "float",
+                    "value": 0
+                },
+                {
+                    "name": "size",
+                    "propertyType": "vector2",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "viewport",
+                    "propertyType": "rect",
+                    "type": "class",
+                    "value": {
+                    }
+                }
+            ],
+            "name": "view",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 10,
+            "members": [
+                {
+                    "name": "file",
+                    "type": "file",
+                    "value": "C:/Program Files/Tiled/libstdc++-6.dll"
+                },
+                {
+                    "name": "obj",
+                    "type": "object",
+                    "value": 0
+                }
+            ],
+            "name": "walls",
+            "type": "class",
+            "useAs": [
+                "property",
+                "layer",
+                "project"
+            ]
+        }
+    ]
+}

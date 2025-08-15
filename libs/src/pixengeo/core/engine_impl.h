@@ -78,7 +78,8 @@ namespace pxg::core
 
 		void init_logging() const noexcept;
 		void load();
-		void load_module(const std::filesystem::path& modulepath);
+		void load_module(const std::filesystem::path& module_path);
+		void load_project(const std::filesystem::path& project_path);
 		void main_loop(std::string_view title, std::size_t width, std::size_t height, bool fullscreen, bool resizable);
 
 #pragma endregion

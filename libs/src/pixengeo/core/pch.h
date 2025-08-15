@@ -49,3 +49,5 @@
 #include <boost/log/utility/setup.hpp>
 #include <boost/program_options.hpp>
 #include <boost/dll/shared_library.hpp>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>

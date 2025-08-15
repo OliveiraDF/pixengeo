@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="2">
+ <imagelayer id="2" name="background_image">
+  <image source="E:/Media/Images/117a7ed4-d4fd-4342-a2cf-fc72b22c78f2.jpg" width="320" height="240"/>
+ </imagelayer>
+ <objectgroup id="3" name="texts">
+  <object id="1" name="title" x="0" y="0" width="320" height="80">
+   <text fontfamily="Freestyle Script" pixelsize="61" color="#f0f0f0" halign="center" valign="center">WARCRAFT</text>
+  </object>
+ </objectgroup>
+</map>

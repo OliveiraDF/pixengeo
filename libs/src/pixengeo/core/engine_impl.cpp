@@ -81,6 +81,8 @@ namespace pxg::core
 
 			load_module(cli.module);
 
+			load_project(cli.project);
+
 			main_loop(cli.title, cli.width, cli.height, cli.fullscreen, cli.resizable);
 		}
 		catch (const std::exception& e)
@@ -131,12 +133,54 @@ namespace pxg::core
 
 		m_module = boost::dll::shared_library(module_path.c_str(), boost::dll::load_mode::load_with_altered_search_path);
 
+		if (!m_module.has("create_project_func") || !m_module.has("destroy_project_func"))
+		{
+			BOOST_LOG_TRIVIAL(warning) << "'" << module_path.c_str() << "' does not contain required functions";
+			return;
+		}
+
 		auto fn_create_project = m_module.get<create_project_func>("create_project_func");
 		auto fn_destroy_project = m_module.get<destroy_project_func>("destroy_project_func");
 
 		std::unique_ptr<project, destroy_project_func> project_ptr(fn_create_project(), fn_destroy_project);
 
 		m_project = std::move(project_ptr);
+	}
+
+	void engine::impl::load_project(const std::filesystem::path& project_path)
+	{
+		if (!std::filesystem::exists(project_path))
+		{
+			BOOST_LOG_TRIVIAL(warning) << "'" << project_path.c_str() << "' project doesn't exist";
+			return;
+		}
+
+		if (!std::filesystem::is_regular_file(project_path))
+		{
+			BOOST_LOG_TRIVIAL(warning) << "'" << project_path.c_str() << "' is not a regular file";
+			return;
+		}
+
+		boost::property_tree::ptree pt;
+		std::vector<std::filesystem::path> all_tmx;
+
+		boost::property_tree::read_json(project_path.string(), pt);
+
+		for (const auto& entry : pt.get_child("fileStates"))
+		{
+			all_tmx.emplace_back(entry.first);
+		}
+
+		const auto is_not_valid_tmx = [](const std::filesystem::path& path) -> bool
+			{
+				const bool is_tmx = path.extension() == ".tmx";
+				const bool no_forbidden_chars = 
+					path.filename().string().find('$') == std::string::npos &&
+					path.filename().string().find('#') == std::string::npos;
+				return !(is_tmx && no_forbidden_chars);
+			};
+
+		std::erase_if(all_tmx, is_not_valid_tmx);
 	}
 
 	void engine::impl::main_loop(std::string_view title, std::size_t width, std::size_t height, bool fullscreen, bool resizable)

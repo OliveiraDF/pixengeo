@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="5" height="5" tilewidth="16" tileheight="16" infinite="0" nextlayerid="23" nextobjectid="28">
+ <tileset firstgid="1" name="tileset_01" tilewidth="16" tileheight="16" spacing="1" tilecount="968" columns="44">
+  <image source="tileset_01.png" trans="ff00ff" width="748" height="374"/>
+ </tileset>
+ <tileset firstgid="969" source="tileset_01.tsx"/>
+ <group id="16" name="user_interface"/>
+ <group id="15" name="main_view">
+  <layer id="3" name="ground" class="tilemap" width="5" height="5">
+   <data encoding="csv">
+61,461,462,441,62,
+19,4,5,515,19,
+463,354,355,46,464,
+464,4,46,568,19,
+81,501,502,444,82
+</data>
+  </layer>
+  <objectgroup id="9" name="light_system" class="light_system">
+   <properties>
+    <property name="shadow" type="color" value="#ff424242"/>
+   </properties>
+   <object id="15" name="spot_light_01" type="spot_light" x="24" y="24">
+    <properties>
+     <property name="color" type="color" value="#ff55ffff"/>
+     <property name="intensity" type="float" value="20"/>
+     <property name="quality" type="float" value="15"/>
+     <property name="radius" type="float" value="5"/>
+    </properties>
+    <point/>
+   </object>
+   <object id="16" name="spot_light_02" type="spot_light" x="56" y="56">
+    <properties>
+     <property name="color" type="color" value="#ff55ffff"/>
+     <property name="intensity" type="float" value="18"/>
+     <property name="quality" type="float" value="18"/>
+     <property name="radius" type="float" value="6"/>
+    </properties>
+    <point/>
+   </object>
+  </objectgroup>
+  <objectgroup id="12" name="player">
+   <object id="20" name="player_view" type="view" x="32" y="32">
+    <properties>
+     <property name="size" type="class" propertytype="vector2">
+      <properties>
+       <property name="x" type="float" value="320"/>
+       <property name="y" type="float" value="240"/>
+      </properties>
+     </property>
+     <property name="viewport" type="class" propertytype="rect">
+      <properties>
+       <property name="size" type="class" propertytype="vector2">
+        <properties>
+         <property name="x" type="float" value="1"/>
+         <property name="y" type="float" value="1"/>
+        </properties>
+       </property>
+      </properties>
+     </property>
+    </properties>
+    <point/>
+   </object>
+   <object id="22" name="player_collider" type="collider" x="24" y="24" width="16" height="16">
+    <ellipse/>
+   </object>
+   <object id="23" name="player_torch" type="directional_light" x="32" y="32">
+    <point/>
+   </object>
+   <object id="25" name="player_listener" type="listener" x="32" y="32">
+    <point/>
+   </object>
+   <object id="27" name="player_sprite" gid="1681" x="-32" y="32" width="16" height="16"/>
+  </objectgroup>
+  <objectgroup id="10" name="walls" class="walls">
+   <properties>
+    <property name="obj" type="object" value="13"/>
+   </properties>
+   <object id="10" name="wall_04" type="collider" x="0" y="0" width="16" height="64"/>
+   <object id="11" name="wall_03" type="collider" x="0" y="64" width="64" height="16"/>
+   <object id="12" name="wall_02" type="collider" x="16" y="0" width="64" height="16"/>
+   <object id="13" name="wall_01" type="collider" x="64" y="16" width="16" height="64"/>
+  </objectgroup>
+ </group>
+</map>

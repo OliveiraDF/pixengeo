@@ -2,6 +2,7 @@ find_package(boost_program_options CONFIG REQUIRED)
 find_package(boost_log CONFIG REQUIRED)
 find_package(boost_log_setup CONFIG REQUIRED)
 find_package(Boost REQUIRED COMPONENTS dll)
+find_package(boost_property_tree CONFIG REQUIRED)
 
 set(SRCROOT "${PROJECT_SOURCE_DIR}/libs/src/pixengeo/core")
 
@@ -32,6 +33,7 @@ target_link_libraries(${PROJECT_NAME}-core
 		Boost::log
 		Boost::log_setup
 		Boost::dll
+		Boost::property_tree
 		${PROJECT_NAME}-graphics
 )
 
